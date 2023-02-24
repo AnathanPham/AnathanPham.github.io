@@ -1,0 +1,6 @@
+baseurl: "/AnathanPham.github.io/build"
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
