@@ -1,0 +1,6 @@
+domain: AnathanPham.github.io # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://AnathanPham.github.io # the base hostname and protocol for your site, e.g. http://example.com
+baseurl: /build/ # place folder name if the site is served in a subfolder
+exclude:
+  - README.md
+  - LICENSE
