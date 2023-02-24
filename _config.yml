@@ -1,6 +1,4 @@
-baseurl: "/AnathanPham.github.io"
+baseurl: "/AnathanPham.github.io/index"
 exclude:
-  - Gemfile
-  - Gemfile.lock
   - README.md
   - LICENSE
