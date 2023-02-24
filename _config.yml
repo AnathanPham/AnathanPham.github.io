@@ -1,4 +1,4 @@
-baseurl: "/AnathanPham.github.io/build"
+baseurl: "/AnathanPham.github.io"
 exclude:
   - Gemfile
   - Gemfile.lock
