@@ -1,4 +1,4 @@
-baseurl: "/AnathanPham.github.io/index"
+baseurl: "/AnathanPham.github.io/build/index"
 exclude:
   - README.md
   - LICENSE
