@@ -1,4 +1,5 @@
 name: Build and upload file to server
+run-name: Build this is run name
 
 on:
   push:
