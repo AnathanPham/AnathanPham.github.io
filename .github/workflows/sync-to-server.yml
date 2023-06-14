@@ -1,0 +1,25 @@
+name: build and upload file to server
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Build
+      # run: |
+      #   yarn install
+      #   yarn build
+    - name: Upload
+      run: echo $NAME
+      # run: |
+      #   scp root@123.207.203.219:/root/README.md README.md
+      env: 
+        NAME: ${{ secrets.NAME }}
