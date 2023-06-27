@@ -1,0 +1,45 @@
+name: ana-workflow
+run-name: ana-workflow
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
+    steps:
+      # 获取源码
+      - name: 迁出代码
+        uses: actions/checkout@v3
+
+      - name: 安装 Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # 安装依赖
+      - name: 安装依赖
+        run: |
+          npm install yarn -g
+          yarn install
+      # 打包
+      - name: 打包
+        run: yarn build
+
+      # 连接服务器
+      - name: 连接服务器
+        run: |
+          ssh root@123.207.203.219
+          ${{ TX_SERVER_PASSWORD }}
+          ls -a
+          pwd
+          mkdir huang123
+          exit 0
