@@ -37,6 +37,9 @@ jobs:
       # 连接服务器
       - name: 连接服务器
         run: |
+          ls -a
+          pwd
+          mkdir huang123
           ssh root@123.207.203.219
           ${{ secrets.TX_SERVER_PASSWORD }}
           ls -a
