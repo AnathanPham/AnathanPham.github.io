@@ -39,30 +39,13 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.0.0
         with:
-#           host: ${{ 123.207.203.219 }}
-          host: 123.207.203.219
-#           username: ${{ root }}
-          username: ubuntu
+          host: ${{ secrets.TX_SERVER_IP }}
+
+          username: ${{ secrets.NAME }}
           password: ${{ secrets.TX_SERVER_PASSWORD }}
-#           port: ${{ 80 }}
           port: 22
-          script: |
-            touch huangbangsheng1-1.txt 
-            ls -al
-      # 连接服务器2
-      - name: executing remote ssh commands using password 2
-        uses: appleboy/ssh-action@v1.0.0
-        with:
-#           host: ${{ 123.207.203.219 }}
-          host: 123.207.203.219
-#           username: ${{ root }}
-          username: lighthouse
-          password: ${{ secrets.TX_SERVER_PASSWORD }}
-#           port: ${{ 80 }}
-          port: 22
-          script: |
-            touch huangbangsheng2-1.txt 
-            ls -al
+          script: whoiam
+
 #       ---
 #       - name: 连接服务器
 #         run: |
