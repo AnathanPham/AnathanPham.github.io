@@ -34,7 +34,7 @@ jobs:
 #       - name: 打包
 #         run: yarn build
 
-      # 连接服务器
+      # 连接服务器1
       
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.0.0
@@ -47,7 +47,21 @@ jobs:
 #           port: ${{ 80 }}
           port: 22
           script: |
-            touch huangbangsheng222.txt 
+            touch huangbangsheng1-1.txt 
+            ls -al
+      # 连接服务器2
+      - name: executing remote ssh commands using password 2
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+#           host: ${{ 123.207.203.219 }}
+          host: 123.207.203.219
+#           username: ${{ root }}
+          username: lighthouse
+          password: ${{ secrets.TX_SERVER_PASSWORD }}
+#           port: ${{ 80 }}
+          port: 22
+          script: |
+            touch huangbangsheng2-1.txt 
             ls -al
 #       ---
 #       - name: 连接服务器
