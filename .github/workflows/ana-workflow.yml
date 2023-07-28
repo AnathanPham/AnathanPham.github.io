@@ -46,7 +46,9 @@ jobs:
           password: ${{ secrets.TX_SERVER_PASSWORD }}
 #           port: ${{ 80 }}
           port: 22
-          script: touch huangbangsheng123.txt 
+          script: |
+            touch huangbangsheng222.txt 
+            ls -al
 #       ---
 #       - name: 连接服务器
 #         run: |
