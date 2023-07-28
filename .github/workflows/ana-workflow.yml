@@ -42,10 +42,10 @@ jobs:
 #           host: ${{ 123.207.203.219 }}
           host: 123.207.203.219
 #           username: ${{ root }}
-          username: root
+          username: ubuntu
           password: ${{ secrets.TX_SERVER_PASSWORD }}
 #           port: ${{ 80 }}
-          port: 80
+          port: 22
           script: mkdir huang123
 #       ---
 #       - name: 连接服务器
